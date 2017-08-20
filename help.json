@@ -1,0 +1,18 @@
+{
+    "type": ["__**Simple Commands (No Arguments)**__\n","Bot Owner Commands\n"],
+    "command":{
+        "simple": ["**ping:** ",
+                    "**info:** ",
+                    "**help:** "],  
+        "owner": ["**prefix:** "]   
+        },
+    "descrip": {
+        "simple": ["Check to see if I'm alive!",
+            "Displays information about me!",
+            "Displays a list of commands and their usage!"],    
+        "owner": ["Changes the command prefix.  "]  
+        },
+    "usage": {
+        "owner": ["prefix <arg> -> &prefix ^"]
+        }
+}

@@ -61,3 +61,5 @@ config.json
 
 # Using txt files as notes, don't need to be included
 *.txt
+
+*.sqlite3
