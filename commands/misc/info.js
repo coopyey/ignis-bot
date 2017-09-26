@@ -16,6 +16,7 @@ module.exports = class InfoCommand extends Command {
     return this.client.isOwner(msg.author)
   }
 
+  //In the event embed permissions aren't given
   run (msg) {
     if (msg.channel.type !== 'dm') {
       if (!msg.channel.permissionsFor(this.client.user).has('EMBED_LINKS')) {

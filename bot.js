@@ -15,9 +15,10 @@ client.registry //registers custom commands groups
 	.registerGroups([
 		['fun', 'Fun Commands'],
 		['owner', 'Bot Owner Commands'],
-		['users', 'Moderation Commands'],
+		['mod', 'Moderation Commands'],
 		['channels', 'Channel Administration Commands'],
-		['misc', "Miscellaneous Commands"]
+		['misc', 'Miscellaneous Commands'],
+		['ffxiv','Commands Related to FFXIV']
 	])
 	.registerDefaults() //registers built-in groups
 	.registerCommandsIn(path.join(__dirname, 'commands')); //registers all commands into commands directory
