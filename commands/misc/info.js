@@ -20,16 +20,16 @@ module.exports = class InfoCommand extends Command {
   run (msg) {
     if (msg.channel.type !== 'dm') {
       if (!msg.channel.permissionsFor(this.client.user).has('EMBED_LINKS')) {
-        return msg.say('__General Information__\n**Library:** discord.js 11.1.0\n**Servers:** ' + this.client.guilds.size + 
+        return msg.say('__General Information__\n**Library:** discord.js 11.1.0\n' + 
                                 '\n\n__Help:__\nThis bot is created and maintained by coopyey#7235. If you need any help, find a bug, or have a question, please pm Coop!')
       }
     };
 
     const embed = new RichEmbed()
-            .setColor(16743166)
-            .addField('Library', 'discord.js 11.1.0', true)
-            .addField('Servers', this.client.guilds.size, true)
+            .setColor(0x9F9FFF)
             .setDescription('**General Information**')
+            .addField('Library', 'discord.js', true)  
+            .addField('Framework', 'discord.js commando', true)          
             .addField('Help', 'This bot is created and maintained by coopyey#7235. If you need any help, find a bug, or have a question, please pm Coop!')
     return msg.embed(embed)
   }
