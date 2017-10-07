@@ -12,25 +12,27 @@ module.exports = class PurgeCommand extends Command {
       examples: ['prune 4'],
       clientPermissions: ['MANAGE_MESSAGES'],
       args: [{
-          key: 'value',
+          key: 'number',
           prompt: 'How many messages to purge?',
           type: 'integer',
-        validate: m => {
-          if (m < 100 || m > 2) return true;
-          return 'Please specify a number between 2 and 100.'
-        }
       }]
     });
   }
 
   async run (message, args) {
-    //deletes discord extremes - no specification yet
     let { number } = args;
+
+    if (number > 100 || number < 2) {
+      return message.channel.send('Please prune between 2 and 100 messages.')
+    }
 
     if (!message.member.permissions.has('MANAGE_MESSAGES')) {
       return message.channel.send("You don't have permission to manage messages.")
     }
 
-    message.channel.fetchMessages({limit: args}).then(messages => { message.channel.bulkDelete(messages) })
-  };
-};
+    message.channel.fetchMessages({limit: number}).then(messages => { 
+      message.channel.bulkDelete(messages)
+      message.channel.send(`Removed ${messages.size} messages.`)
+   })
+  }; //end run
+}; //end command
