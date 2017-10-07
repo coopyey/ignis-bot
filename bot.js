@@ -1,6 +1,7 @@
 //with Commando you must run with the --harmony flag: node --harmony bot.js
 
 const Discord = require('discord.js-commando'); //discord.js-commando
+const command = require('discord.js-commando')
 const config = require('./config.json'); //login token, ownerID, botID, default prefix
 const info = require('./package.json'); //meraka information
 const help = require('./help.json'); //data for help command
@@ -16,7 +17,6 @@ client.registry //registers custom commands groups
 		['fun', 'Fun Commands'],
 		['owner', 'Bot Owner Commands'],
 		['mod', 'Moderation Commands'],
-		['channels', 'Channel Administration Commands'],
 		['misc', 'Miscellaneous Commands'],
 		['ffxiv','Commands Related to FFXIV']
 	])
