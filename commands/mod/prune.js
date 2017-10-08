@@ -25,7 +25,7 @@ module.exports = class PurgeCommand extends Command {
       return message.channel.send('Please prune between 2 and 100 messages.')
     }
 
-    if (!message.channel.permissions.has(this.client.user).has('MANAGE_MESSAGES')) {
+    if (!message.channel.permissionsFor(this.client.user).has('MANAGE_MESSAGES')) {
       return message.channel.send("Help! I don't have permission to manage messages!")
     }
 

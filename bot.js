@@ -4,13 +4,12 @@ const Discord = require('discord.js-commando'); //discord.js-commando
 const command = require('discord.js-commando')
 const config = require('./config.json'); //login token, ownerID, botID, default prefix
 const info = require('./package.json'); //meraka information
-const help = require('./help.json'); //data for help command
 const sqlite = require('sqlite'); //database for guild settings
 const path = require('path'); //for pathing
 const oneLine = require("common-tags").oneLine;
 const fs = require("fs"); //file stream
 
-const client = new Discord.Client({ owner: config.ownerID, commandPrefix: '&', disableEveryone: true });
+const client = new Discord.Client({ owner: config.ownerID, commandPrefix: 'm.', disableEveryone: true });
 
 client.registry //registers custom commands groups
 	.registerGroups([

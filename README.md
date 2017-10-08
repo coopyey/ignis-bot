@@ -20,7 +20,7 @@ A list of things I would like to get done for Meraka, including commands I would
 - [x] info
 
 ###### Moderation Commands:
-- [ ] message pruning
+- [x] message pruning
 
 ###### FFXIV:
 - [ ] Lodestone lookup
@@ -44,6 +44,6 @@ A list of things I would like to get done for Meraka, including commands I would
 ###### Technical Stuff:
 - [ ] Get a host to keep Meraka up while working on her
 - [x] Clean up code - figure out how to clean up the main (functions, plug in style?)
-- [ ] Commands with modifiers (args)
+- [x] Commands with modifiers (args)
 - [ ] Character storage system for FFXIV characters
 - [ ] Lodestone polling
