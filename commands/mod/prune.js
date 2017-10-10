@@ -9,7 +9,7 @@ module.exports = class PurgeCommand extends Command {
       group: 'mod',
       memberName: 'prune',
       description: 'Deletes messages.',
-      examples: ['prune 4'],
+      examples: ['prune <number>'],
       args: [{
           key: 'number',
           prompt: 'How many messages to purge?',
