@@ -1,7 +1,7 @@
 {
-  "name": "Meraka",
+  "name": "Ignis",
   "version": "1.0.0",
-  "description": "A small bot; a small bliss.",
+  "description": "I've discovered a new recipe!",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

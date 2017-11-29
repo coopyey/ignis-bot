@@ -26,7 +26,7 @@ module.exports = class PurgeCommand extends Command {
     }
 
     if (!message.channel.permissionsFor(this.client.user).has('MANAGE_MESSAGES')) {
-      return message.channel.send("Help! I don't have permission to manage messages!")
+      return message.channel.send("I don't have permission to manage messages.")
     }
 
     if (!message.member.permissions.has('MANAGE_MESSAGES')) {

@@ -3,7 +3,7 @@ const Discord = require('discord.js-commando'); //discord.js-commando
 const config = require("F:\\Programming\\meraka\\config.json")
 
 
-module.exports = class PurgeCommand extends Command {
+module.exports = class AvatarCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'avatar',
@@ -24,7 +24,7 @@ module.exports = class PurgeCommand extends Command {
     let { input } = args;
 
     if (message.member.id != config.ownerID) {
-      return message.channel.send("You don't have permission to change my avatar, silly!")
+      return message.channel.send("You don't have permission to change my avatar.")
     }
 
     this.client.user.setAvatar(input)

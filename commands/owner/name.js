@@ -2,7 +2,7 @@ const { Command } = require('discord.js-commando');
 const Discord = require('discord.js-commando'); //discord.js-commando
 const config = require("F:\\Programming\\meraka\\config.json")
 
-module.exports = class PurgeCommand extends Command {
+module.exports = class NameCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'name',
@@ -23,7 +23,7 @@ module.exports = class PurgeCommand extends Command {
     let { input } = args;
 
     if (message.member.id != config.ownerID) {
-      return message.channel.send("You don't have permission to change my name, silly!")
+      return message.channel.send("You don't have permission to change my name.")
     }
 
     this.client.user.setUsername(input)

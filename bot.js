@@ -9,7 +9,7 @@ const path = require('path'); //for pathing
 const oneLine = require("common-tags").oneLine;
 const fs = require("fs"); //file stream
 
-const client = new Discord.Client({ owner: config.ownerID, commandPrefix: 'm.', disableEveryone: true });
+const client = new Discord.Client({ owner: config.ownerID, commandPrefix: 'i.', disableEveryone: true });
 
 client.registry //registers custom commands groups
 	.registerGroups([
