@@ -1,4 +1,4 @@
-# meraka
+# ignis bot
 A Discord bot written in Node.js.
 
 ### Features that will be added:
@@ -14,7 +14,7 @@ This bot requires node.js and discord.js.
 Coopyey#7235 maintains this bot. If you need any help, please pm Coop.
 
 ### To Do:
-A list of things I would like to get done for Meraka, including commands I would currently like to implement.
+A list of things I would like to get done for Ignis, including commands I would currently like to implement.
 
 ###### General Commands:
 - [x] info
@@ -50,7 +50,7 @@ A list of things I would like to get done for Meraka, including commands I would
 - [ ] Enable/disable command
 
 ###### Technical Stuff:
-- [ ] Get a host to keep Meraka up while working on her
+- [ ] Get a host to keep Ignis up while working on her
 - [x] Clean up code - figure out how to clean up the main (functions, plug in style?)
 - [x] Commands with modifiers (args)
 - [ ] Character storage system for FFXIV characters
