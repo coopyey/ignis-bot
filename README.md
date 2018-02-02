@@ -30,14 +30,6 @@ A list of things I would like to get done for Ignis, including commands I would 
 - [ ] Class lookups
 - [ ] Equipment lookups
 
-###### FFXIV:
-- [ ] Lodestone lookup
-- [ ] Stored character lookup
-- [ ] Raid main/sub setups
-- [ ] Parse record display
-- [ ] Class lookups
-- [ ] Equipment lookups
-
 ###### Fun Stuff:
 - [ ] 8 ball
 - [ ] Choose for me
@@ -45,12 +37,8 @@ A list of things I would like to get done for Ignis, including commands I would 
 - [ ] Random simplified biology facts (teeth are exposed bones, bones are full of holes,etc)
 - [ ] Dice roll (random number)
 
-###### Other:
-- [ ] Change prefix
-- [ ] Enable/disable command
-
 ###### Technical Stuff:
-- [ ] Get a host to keep Ignis up while working on her
+- [ ] Get a host to keep Ignis up while working on it
 - [x] Clean up code - figure out how to clean up the main (functions, plug in style?)
 - [x] Commands with modifiers (args)
 - [ ] Character storage system for FFXIV characters
