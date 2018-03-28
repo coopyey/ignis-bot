@@ -4,7 +4,6 @@ const Discord = require('discord.js-commando'); //discord.js-commando
 const command = require('discord.js-commando')
 const config = require('./config.json'); //login token, ownerID, botID, default prefix
 const info = require('./package.json'); //meraka information
-const sqlite = require('sqlite'); //database for guild settings
 const path = require('path'); //for pathing
 const oneLine = require("common-tags").oneLine;
 const fs = require("fs"); //file stream
@@ -21,9 +20,6 @@ client.registry //registers custom commands groups
 	])
 	.registerDefaults() //registers built-in groups
 	.registerCommandsIn(path.join(__dirname, 'commands')); //registers all commands into commands directory
-
- client.setProvider(
-	sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new client.SQLiteProvider(db))).catch(console.error);
 
 client.login(config.token);
 client
@@ -56,6 +52,8 @@ client
 	.on('ready', () => {
 		console.log('\nName: ' + client.user.username + '\nVersion: ' + info.version + '\n');
 		console.log('Logged in!\nServing ' + client.guilds.array().length +  ' servers and ' + client.users.array().length + ' users!\n');
-		client.user.setGame(config.prefix + 'info | ' + config.prefix + 'help'); });
+		client.user.setActivity('i.help | i.info', {type: 'LISTENING'})
+			.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+			.catch(console.error); });
 
 process.on('unhandledRejection', err => console.error(`Uncaught Promise Error: \n${err.stack}`));

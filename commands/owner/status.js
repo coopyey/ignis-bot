@@ -26,8 +26,8 @@ module.exports = class StatusCommand extends Command {
       return message.channel.send("You don't have permission to change my status.")
     }
 
-    this.client.user.setGame(input)
-      .then(user => console.log(`My new username is ${user.username}.`))   
+    this.client.user.setActivity(`${input}`, {type: 'LISTENING'})
+      .then(user => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))   
       .catch(console.error);
   }; //end run
 }; //end command

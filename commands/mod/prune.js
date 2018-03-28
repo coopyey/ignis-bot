@@ -33,8 +33,11 @@ module.exports = class PurgeCommand extends Command {
       return message.channel.send("You don't have permission to manage messages.")
     }
 
-    message.channel.fetchMessages({limit: number}).then(messages => { 
-      message.channel.bulkDelete(messages)
-      message.channel.send(`Removed ${messages.size} messages.`)})
+    message.channel.fetchMessages({limit: number})
+      .then(messages => { 
+        message.channel.bulkDelete(messages)
+        message.channel.send(`Removed ${messages.size} messages.`)})
+      .then(messages => console.log(`Pruned ${number} messages.`)) 
+
   }; //end run
 }; //end command

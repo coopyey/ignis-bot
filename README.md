@@ -38,8 +38,8 @@ A list of things I would like to get done for Ignis, including commands I would 
 - [ ] Dice roll (random number)
 
 ###### Technical Stuff:
-- [ ] Get a host to keep Ignis up while working on it
 - [x] Clean up code - figure out how to clean up the main (functions, plug in style?)
 - [x] Commands with modifiers (args)
 - [ ] Character storage system for FFXIV characters
 - [ ] Lodestone polling
+- [x] Get a host
