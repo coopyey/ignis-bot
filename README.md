@@ -8,10 +8,10 @@ Channel management
 FFXIV specific commands
 
 ### Installation
-This bot requires node.js and discord.js.
+This bot requires node.js, discord.js, and the discord.js commando framework.
 
 ### Who do I talk to?
-Coopyey#7235 maintains this bot. If you need any help, please pm Coop.
+coopyey#1337 maintains this bot. If you need any help, please pm Coop.
 
 ### To Do:
 A list of things I would like to get done for Ignis, including commands I would currently like to implement.
