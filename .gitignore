@@ -63,4 +63,7 @@ config.json
 # Using txt files as notes, don't need to be included
 *.txt
 
+# Host has cron job to autoboot the bot on power failure
+run.sh
+
 *.sqlite3

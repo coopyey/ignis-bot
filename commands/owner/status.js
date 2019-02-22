@@ -1,6 +1,6 @@
 const { Command } = require('discord.js-commando');
 const Discord = require('discord.js-commando'); //discord.js-commando
-const config = require("F:\\Programming\\meraka\\config.json")
+const config = require("../../config.json")
 
 module.exports = class StatusCommand extends Command {
   constructor (client) {
