@@ -6,7 +6,7 @@ const config = require('./config.json'); //login token, ownerID, botID, default 
 const info = require('./package.json'); //meraka information
 const path = require('path'); //for pathing
 const oneLine = require("common-tags").oneLine;
-const fs = require("fs"); //file stream
+//const fs = require("fs"); //file stream
 
 const client = new Discord.Client({ owner: config.ownerID, commandPrefix: 'i.', disableEveryone: true });
 

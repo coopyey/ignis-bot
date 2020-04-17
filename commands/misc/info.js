@@ -18,7 +18,7 @@ module.exports = class InfoCommand extends Command {
     if (msg.channel.type !== 'dm') {
       if (!msg.channel.permissionsFor(this.client.user).has('EMBED_LINKS')) {
         return msg.say('__General Information__\n**Library:** discord.js\n**Framework:** discord.js-commando\n' + 
-                                '\n__Help:__\nThis bot is created and maintained by coopyey#7235. If you need any help, find a bug, or have a question, please pm Coop!')
+                                '\n__Help:__\nThis bot is created and maintained by coopyey. If you need any help, find a bug, or have a question, please pm Coop!')
       }
     };
 
@@ -27,7 +27,7 @@ module.exports = class InfoCommand extends Command {
             .setDescription('**General Information**')
             .addField('Library', 'discord.js', true)  
             .addField('Framework', 'discord.js commando', true)          
-            .addField('Help', 'This bot is created and maintained by coopyey#7235. If you need any help, find a bug, or have a question, please pm Coop!')
+            .addField('Help', 'This bot is created and maintained by coopyey. If you need any help, find a bug, or have a question, please pm Coop!')
     return msg.embed(embed)
   }
 }

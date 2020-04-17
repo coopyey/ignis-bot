@@ -11,7 +11,7 @@ FFXIV specific commands
 This bot requires node.js, discord.js, and the discord.js commando framework.
 
 ### Who do I talk to?
-coopyey#1337 maintains this bot. If you need any help, please pm Coop.
+coopyey maintains this bot. If you need any help, please pm Coop.
 
 ### To Do:
 A list of things I would like to get done for Ignis, including commands I would currently like to implement.

@@ -21,6 +21,7 @@ module.exports = class StatusCommand extends Command {
 
   async run (message, args) {
     let { input } = args;
+    let { keys } = input.split(' ');
 
     if (message.member.id != config.ownerID) {
       return message.channel.send("You don't have permission to change my status.")

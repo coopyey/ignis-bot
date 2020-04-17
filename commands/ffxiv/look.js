@@ -1,5 +1,8 @@
 const { Command } = require('discord.js-commando');
-const Discord = require('discord.js-commando'); //discord.js-commando
+const config = require('..\\..\\config.json'); //login token, ownerID, botID, default prefix
+const xivapi = require('xivapi-js');
+
+const xiv = new xivapi({ private_key: config.xivapitoken, language: 'en' });
 
 module.exports = class LookCommand extends Command {
   constructor (client) {
@@ -17,13 +20,25 @@ module.exports = class LookCommand extends Command {
     });
   }
 
-  async run (message/*, args*/) {
-    //https://www.npmjs.com/package/lodestonejs
-    //let { input } = args;
+  async run (message, args) {
+    let { input } = args; 
+    var done = input.split(" ");
 
-    //Need parsing
+    var server = done[0];
+    var first = done[1];
+    var last = done[2];
 
-    return message.channel.send("FFXIV look command has been called. This command is still a work in progress.")    
+    console.log(`Running lookup on ${input}.`);
 
+    let res = await xiv.character.search(`${first} ${last}`, {server: server})
+    let char = res.Results[0].Name
+    
+    xiv.search(`${first} ${last}`, {server: server}).then((response) => {
+      console.log(char);
+    }).catch((error) => {
+      console.log(`Error: ${error}`)
+    })
+
+    return message.channel.send(`${first} ${last} on ${server} successfully found!`)
   }; //end run
 }; //end command
