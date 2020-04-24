@@ -8,10 +8,10 @@ module.exports = class DiceCommand extends Command {
       aliases: ['dice'],
       group: 'fun',
       memberName: 'roll',
-      description: 'Generates a random number.',
+      description: 'Generates a random number based on a dice roll.',
       examples: ['roll 1d4'],
       args: [{
-          key: 'dice',
+          key: 'number',
           prompt: 'How many dice to roll?',
           type: 'string'
       }]
@@ -21,7 +21,22 @@ module.exports = class DiceCommand extends Command {
   async run (message, args) {
     let { number } = args;
 
-    //code here
+    var cut = number.split("d");
+
+    var dice = cut[0];
+    var sides = cut[1];
+
+    var counter = 0;
+    var total = 0;
+    var value = 0;
+
+    while (counter < dice) {
+      value = Math.floor(Math.random() * sides+1);
+      total += value;
+      counter++;
+    }
+
+    return message.channel.send(total);
 
   }; //end run
 }; //end command
