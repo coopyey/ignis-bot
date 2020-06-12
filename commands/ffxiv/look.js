@@ -30,15 +30,20 @@ module.exports = class LookCommand extends Command {
 
     console.log(`Running lookup on ${input}.`);
 
-    let res = await xiv.character.search(`${first} ${last}`, {server: server})
-    let char = res.Results[0].Name
-    
-    xiv.search(`${first} ${last}`, {server: server}).then((response) => {
-      console.log(char);
-    }).catch((error) => {
-      console.log(`Error: ${error}`)
-    })
+    try {
+      let res = await xiv.character.search(`${first} ${last}`, {server: server})
+        let char = res.Results[0]
 
-    return message.channel.send(`${first} ${last} on ${server} successfully found!`)
+        xiv.search(`${first} ${last}`, {server: server}).then((response) => {
+          console.log(char.Name);
+        }).catch((error) => {
+          console.log(`Error: ${error}`)
+        })
+    
+        return message.channel.send(`${char.Name} with id ${char.ID} successfully found!`)
+    } catch(error) {
+        return message.channel.send(`I cannot find that character on that server.`)
+    }; //end try catch block
+    
   }; //end run
 }; //end command
