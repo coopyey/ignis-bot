@@ -1,12 +1,9 @@
 //with Commando you must run with the --harmony flag: node --harmony bot.js
 
 const Discord = require('discord.js-commando'); //discord.js-commando
-const command = require('discord.js-commando')
 const config = require('./config.json'); //login token, ownerID, botID, default prefix
 const info = require('./package.json'); //meraka information
 const path = require('path'); //for pathing
-const oneLine = require("common-tags").oneLine;
-//const fs = require("fs"); //file stream
 
 const client = new Discord.Client({ owner: config.ownerID, commandPrefix: 'i.', disableEveryone: true });
 
